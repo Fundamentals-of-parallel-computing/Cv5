@@ -11,8 +11,6 @@ int main() {
         cout << "Ошибка: изображение не найдено. Проверьте путь." << endl;
         return -1;
     }
-
-    // Уменьшаем размер изображения до 400x400
     resize(inputImage, inputImage, Size(400, 400));
 
     Mat hsvImage;
@@ -45,7 +43,6 @@ int main() {
         cv::circle(resultRed, center, radius, Scalar(255, 0, 0), 2, LINE_AA);
     }
 
-    // Уменьшаем размер маски и результата до 400x400 для отображения
     resize(redAreaMask, redAreaMask, Size(400, 400));
     resize(resultRed, resultRed, Size(400, 400));
 
